@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Grand+Hotel&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Condiment&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Yesteryear&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --cor-principal: #fdf1cc;
+    --fonte-pricipal: "Abril Fatface", serif;
+    --fonte-titulo: "Condiment", cursive;
+    --color-nav: #fcd036;
+    --color-header: #987f69;
+    --color-header-line: #E3AD40;
+    --detalhes: #c6d6b8;
+    --color-border:#7f916d;
+    --color-border-footer:#7a6553;
+}
+
+body {
+    background-color: var(--cor-principal);
+    font-family: var(--fonte-pricipal);
+
+}
+
+.coluna{
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--color-header);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 1.5rem;
+
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    color: white;
+}
+
+.absolut{
+    position: absolute;
+}
+
+.relative{
+    position: relative;
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.4rem;
+}
+
+.line>span {
+    height: 0.16rem;
+    border-bottom: 0.16rem solid white;
+}
+
+nav {
+    height: 3rem;
+    background-color: var(--color-nav);
+    border-bottom: 5px solid var(--color-header-line);
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+}
+
+nav>a {
+    color: #5a5a5a;
+}
+
+nav>a:hover {
+    color: #333;
+    transition: all 0.2s ease-out;
+}
+
+.img {
+    height: 40rem;
+    overflow: hidden;
+}
+
+.img,
+img {
+    width: 100%;
+
+}
+
+.img,
+.content {
+    position: relative;
+}
+
+.img::before {
+    width: 100%;
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #00000077;
+}
+
+.intro {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    width: 50rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: x-large;
+    color: white;
+}
+
+.titulo {
+    font-size: 5rem;
+}
+.legenda{
+    font-size: medium;
+    padding-top: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    border: 5px solid var(--color-border);
+    border-radius: 25px;
+    padding: 14px;
+    width: 300px;
+    background-color: var(--detalhes);
+}
+.card>p{
+    text-align: center;
+}
+.card>div {
+    height: 263px;
+    display: flex;
+    align-items: center;
+}
+
+.secondcard {
+    padding: 20px 0;
+}
+
+.secondcard>h2 {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.card>div>img {
+    border-radius: 14px;
+}
+footer{
+    background-color: var(--color-header);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    color: white;
+    border-top: solid 5px var(--color-border-footer);
+}
+.flex{
+    display: flex;
+    padding-bottom: 10px;
+    gap: 4px;    
+}
+
+.flex .line{
+   justify-content: center;
+    width: 100%;
+    flex-direction: column;    
+}
+
+.flex .line>span{
+    border-color: black;
+}
+/*css da página moda*/
+.moda{
+    flex-direction: column;
+    gap: 5rem;
+    padding: 0 10rem;
+    padding-top: 5rem;
+}
+.moda .card,.card.cultura{
+    width: 100%;
+    display: flex;
+}
+.moda .card img{
+    width: 270px;
+    border-radius: 14px;
+}
+.moda .card p{
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: justify;    
+}
+.moda .card .flex{
+    justify-content: center;
+    flex: 1;
+}
+/*css da página de cultura*/
+.card.cultura{
+    margin: 50px 20px;
+    height: 100px;
+}
+.centro{
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    font-family: var(--fonte-titulo);
+}
+
+.cards.cultura{
+    top: 30%;
+    transform: translate(-50%);
+    left: 50%;    
+}
+
+#pageCultura .img{
+    height: initial;
+}
+
+
+
+
